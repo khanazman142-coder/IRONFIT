@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IRONFIT | Fitness Center</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <style> 
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+    color: white;
+}
+
+
+/* NAVBAR */
+
+header {
+    background: #111;
+    padding: 20px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 28px;
+}
+
+nav h1 span,
+footer span {
+    color: #ff3b30;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff3b30;
+}
+
+
+/* HERO */
+
+.hero {
+    height: 90vh;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.65)
+        ),
+        url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48")
+        center/cover;
+
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.hero-content p:first-child {
+    color: #ff3b30;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.hero h2 {
+    font-size: 65px;
+    line-height: 1.05;
+    margin: 20px 0;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+
+    background: #ff3b30;
+    color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #d92720;
+}
+
+
+/* ABOUT */
+
+.about {
+    padding: 100px 10%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+}
+
+.about-text {
+    max-width: 650px;
+}
+
+.title {
+    color: #ff3b30;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.about h2 {
+    font-size: 45px;
+    margin: 15px 0 25px;
+}
+
+.about p {
+    color: #bbb;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-box {
+    background: #171717;
+    padding: 50px;
+    text-align: center;
+    border-left: 4px solid #ff3b30;
+}
+
+.about-box h3 {
+    color: #ff3b30;
+    font-size: 45px;
+}
+
+.about-box p {
+    margin-bottom: 25px;
+}
+
+
+/* SERVICES */
+
+.services {
+    padding: 90px 8%;
+    text-align: center;
+    background: #111;
+}
+
+.services h2,
+.plans h2 {
+    font-size: 45px;
+    margin: 15px 0 50px;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: #1a1a1a;
+    padding: 35px 20px;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-bottom: 3px solid #ff3b30;
+}
+
+.service-card div {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+
+/* PLANS */
+
+.plans {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+.plan-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.plan {
+    position: relative;
+
+    background: #151515;
+
+    width: 300px;
+    padding: 40px 25px;
+
+    border-radius: 8px;
+}
+
+.plan h3 {
+    font-size: 25px;
+}
+
+.plan h4 {
+    font-size: 35px;
+    color: #ff3b30;
+    margin: 25px 0;
+}
+
+.plan h4 small {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.plan p {
+    color: #bbb;
+    margin: 15px;
+}
+
+.plan button,
+.contact button {
+    margin-top: 20px;
+
+    padding: 13px 25px;
+
+    background: #ff3b30;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.popular {
+    border: 2px solid #ff3b30;
+    transform: scale(1.05);
+}
+
+.badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #ff3b30;
+
+    padding: 7px 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* CONTACT */
+
+.contact {
+    padding: 90px 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.8),
+            rgba(0,0,0,0.8)
+        ),
+        url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48")
+        center/cover;
+}
+
+.contact h2 {
+    font-size: 40px;
+    margin: 15px 0 30px;
+}
+
+.contact p {
+    margin: 12px;
+    color: #ccc;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #050505;
+    text-align: center;
+    padding: 35px;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #888;
+    margin: 8px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 30px;
+    }
+
+    .hero h2 {
+        font-size: 45px;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .plan-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .popular {
+        transform: none;
+    }
+}
+    </style>
+
+    <!-- NAVBAR -->
+
+    <header>
+        <nav>
+
+            <h1>IRON<span>FIT</span></h1>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#plans">Plans</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p>WELCOME TO IRONFIT</p>
+
+            <h2>BUILD YOUR<br>STRONGER SELF</h2>
+
+            <p>
+                Train hard. Stay consistent. Become stronger.
+            </p>
+
+            <a href="#plans" class="btn">JOIN NOW</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about" class="about">
+
+        <div class="about-text">
+
+            <p class="title">ABOUT US</p>
+
+            <h2>More Than Just A Gym</h2>
+
+            <p>
+                IRONFIT is a modern fitness center designed for
+                people who want to improve their strength,
+                fitness and overall lifestyle.
+            </p>
+
+            <p>
+                Our gym provides modern equipment, professional
+                trainers and a motivating environment.
+            </p>
+
+            <a href="#contact" class="btn">LEARN MORE</a>
+
+        </div>
+
+        <div class="about-box">
+            <h3>500+</h3>
+            <p>Active Members</p>
+
+            <h3>15+</h3>
+            <p>Professional Trainers</p>
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section id="services" class="services">
+
+        <p class="title">WHAT WE OFFER</p>
+
+        <h2>OUR SERVICES</h2>
+
+        <div class="service-container">
+
+            <div class="service-card">
+                <div>🏋️</div>
+                <h3>Strength Training</h3>
+                <p>
+                    Build strength with professional equipment
+                    and structured workouts.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <div>🏃</div>
+                <h3>Cardio Training</h3>
+                <p>
+                    Improve endurance with modern cardio
+                    equipment and training programs.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <div>🧘</div>
+                <h3>Yoga & Mobility</h3>
+                <p>
+                    Improve flexibility, mobility and relaxation
+                    with guided sessions.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <div>🥗</div>
+                <h3>Nutrition Guidance</h3>
+                <p>
+                    Learn healthy eating habits with basic
+                    nutrition guidance.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PLANS -->
+
+    <section id="plans" class="plans">
+
+        <p class="title">MEMBERSHIP</p>
+
+        <h2>CHOOSE YOUR PLAN</h2>
+
+        <div class="plan-container">
+
+            <div class="plan">
+
+                <h3>BASIC</h3>
+
+                <h4>₹999 <small>/ month</small></h4>
+
+                <p>✓ Gym Access</p>
+                <p>✓ Cardio Area</p>
+                <p>✓ Locker Facility</p>
+                <p>✕ Personal Trainer</p>
+
+                <button>GET STARTED</button>
+
+            </div>
+
+
+            <div class="plan popular">
+
+                <div class="badge">POPULAR</div>
+
+                <h3>PRO</h3>
+
+                <h4>₹1,999 <small>/ month</small></h4>
+
+                <p>✓ Full Gym Access</p>
+                <p>✓ Cardio Area</p>
+                <p>✓ Personal Trainer</p>
+                <p>✓ Nutrition Guidance</p>
+
+                <button>GET STARTED</button>
+
+            </div>
+
+
+            <div class="plan">
+
+                <h3>ELITE</h3>
+
+                <h4>₹2,999 <small>/ month</small></h4>
+
+                <p>✓ Full Gym Access</p>
+                <p>✓ Personal Trainer</p>
+                <p>✓ Nutrition Guidance</p>
+                <p>✓ Premium Support</p>
+
+                <button>GET STARTED</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact">
+
+        <p class="title">GET IN TOUCH</p>
+
+        <h2>START YOUR FITNESS JOURNEY</h2>
+
+        <p>📍 Main Road, Akola</p>
+
+        <p>📞 +91 98765 43210</p>
+
+        <p>✉️ info@ironfit.com</p>
+
+        <button>CONTACT US</button>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>IRON<span>FIT</span></h2>
+
+        <p>
+            Train Hard • Stay Strong • Stay Consistent
+        </p>
+
+        <p>© 2026 IRONFIT Fitness Center</p>
+
+    </footer>
+
+</body>
+</html>
